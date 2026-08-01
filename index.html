@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Turf &amp; Tree — Seedlings, Landscaping &amp; Nursery</title>
+<meta name="description" content="Quality tree seedlings, landscaping services, and nursery plants in western Kansas. Visit our nursery or shop online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<style>
+:root {
+  --paper:#faf6ee; --paper-raised:#fffdf8; --paper-sunk:#f0e9db;
+  --line:#e3d9c6; --line-strong:#d3c6ab;
+  --ink:#2a2118; --ink-2:#5d5241; --ink-3:#8c7f66;
+  --accent:#4a6d35; --accent-soft:#6a8f52; --accent-wash:#e9f0e0;
+  --accent-dark:#3a5529;
+  --brass:#a9762c; --brass-wash:#f3e7cf;
+  --warm:#8b6914;
+  --shadow:0 1px 2px rgba(42,33,24,.05), 0 6px 20px rgba(42,33,24,.06);
+  --shadow-sm:0 1px 2px rgba(42,33,24,.06);
+  --radius:14px; --radius-sm:9px;
+  --serif:"Source Serif 4","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark) {
+  :root {
+    --paper:#1c150e; --paper-raised:#251c12; --paper-sunk:#171009;
+    --line:#392c1d; --line-strong:#4a3a26;
+    --ink:#f4eede; --ink-2:#cbbda3; --ink-3:#9c8e74;
+    --accent:#7fb15c; --accent-soft:#9acd78; --accent-wash:#1e2e16;
+    --accent-dark:#5a9a3a;
+    --brass:#d3a24f; --brass-wash:#33260f;
+    --warm:#d4a94e;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 26px rgba(0,0,0,.35);
+    --shadow-sm:0 1px 2px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="light"] {
+  --paper:#faf6ee; --paper-raised:#fffdf8; --paper-sunk:#f0e9db;
+  --line:#e3d9c6; --line-strong:#d3c6ab;
+  --ink:#2a2118; --ink-2:#5d5241; --ink-3:#8c7f66;
+  --accent:#4a6d35; --accent-soft:#6a8f52; --accent-wash:#e9f0e0;
+  --accent-dark:#3a5529;
+  --brass:#a9762c; --brass-wash:#f3e7cf;
+  --warm:#8b6914;
+  --shadow:0 1px 2px rgba(42,33,24,.05), 0 6px 20px rgba(42,33,24,.06);
+  --shadow-sm:0 1px 2px rgba(42,33,24,.06);
+}
+:root[data-theme="dark"] {
+  --paper:#1c150e; --paper-raised:#251c12; --paper-sunk:#171009;
+  --line:#392c1d; --line-strong:#4a3a26;
+  --ink:#f4eede; --ink-2:#cbbda3; --ink-3:#9c8e74;
+  --accent:#7fb15c; --accent-soft:#9acd78; --accent-wash:#1e2e16;
+  --accent-dark:#5a9a3a;
+  --brass:#d3a24f; --brass-wash:#33260f;
+  --warm:#d4a94e;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 26px rgba(0,0,0,.35);
+  --shadow-sm:0 1px 2px rgba(0,0,0,.3);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+body {
+  font-family: var(--sans); color: var(--ink); background: var(--paper);
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4 { font-family: var(--serif); font-weight: 600; letter-spacing: -.01em; text-wrap: balance; line-height: 1.15; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; display: block; }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); }
+.eyebrow { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+
+/* ---- NAV ---- */
+.nav { border-bottom: 1px solid var(--line); background: var(--paper-raised); position: sticky; top: 0; z-index: 100; }
+.nav-inner { display: flex; align-items: center; gap: 16px; padding: 12px 0; flex-wrap: wrap; }
+.nav-brand { display: flex; align-items: center; gap: 10px; margin-right: auto; text-decoration: none; color: var(--ink); }
+.nav-brand svg { width: 36px; height: 36px; }
+.nav-brand span { font-family: var(--serif); font-size: 18px; font-weight: 700; }
+.nav-links { display: flex; gap: 6px; align-items: center; }
+.nav-links a { font-size: 13px; font-weight: 600; padding: 7px 12px; border-radius: 8px; color: var(--ink-2); text-decoration: none; transition: background .15s, color .15s; }
+.nav-links a:hover { background: var(--accent-wash); color: var(--accent); text-decoration: none; }
+.btn-signin { font-family: var(--sans); font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 9px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; transition: transform .08s, background .15s; }
+.btn-signin:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.btn-signin svg { width: 16px; height: 16px; }
+.user-pill { font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 9px; background: var(--accent-wash); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); display: none; align-items: center; gap: 7px; }
+.user-pill img { width: 22px; height: 22px; border-radius: 50%; }
+
+/* ---- HERO ---- */
+.hero {
+  padding: clamp(48px, 8vw, 100px) 0 clamp(40px, 6vw, 80px);
+  background: radial-gradient(ellipse 900px 400px at 75% 20%, var(--accent-wash), transparent 70%),
+              radial-gradient(ellipse 600px 300px at 20% 80%, var(--brass-wash), transparent 60%),
+              var(--paper);
+}
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.hero h1 { font-size: clamp(32px, 4.5vw, 54px); margin-bottom: 16px; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero p { font-size: clamp(15px, 1.2vw, 18px); color: var(--ink-2); max-width: 500px; margin-bottom: 28px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary { font-family: var(--sans); font-size: 15px; font-weight: 700; padding: 13px 28px; border-radius: 11px; border: none; background: var(--accent); color: #fff; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: transform .08s, background .15s; box-shadow: var(--shadow); text-decoration: none; }
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); text-decoration: none; }
+.btn-secondary { font-family: var(--sans); font-size: 15px; font-weight: 700; padding: 13px 28px; border-radius: 11px; border: 1px solid var(--line-strong); background: var(--paper-raised); color: var(--ink); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: transform .08s, border-color .15s; box-shadow: var(--shadow-sm); text-decoration: none; }
+.btn-secondary:hover { border-color: var(--accent); transform: translateY(-1px); text-decoration: none; }
+.hero-visual { background: var(--paper-raised); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); text-align: center; }
+.hero-visual .placeholder { font-size: 64px; line-height: 1; margin-bottom: 12px; }
+.hero-visual p { font-size: 13px; color: var(--ink-3); }
+
+/* ---- HOURS BANNER ---- */
+.hours-bar { background: var(--accent-wash); border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent); border-radius: var(--radius); padding: 18px 24px; margin: -20px 0 40px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; box-shadow: var(--shadow-sm); }
+.hours-bar .icon { font-size: 24px; }
+.hours-bar .info { flex: 1; min-width: 200px; }
+.hours-bar h3 { font-size: 15px; margin-bottom: 2px; }
+.hours-bar p { font-size: 13px; color: var(--ink-2); margin: 0; }
+.hours-bar .status { font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 999px; white-space: nowrap; }
+.hours-bar .open { background: #e6efdd; color: #4f7a3a; border: 1px solid color-mix(in srgb, #4f7a3a 25%, transparent); }
+.hours-bar .closed { background: #f6e0d9; color: #ad3f2b; border: 1px solid color-mix(in srgb, #ad3f2b 25%, transparent); }
+@media (prefers-color-scheme:dark) {
+  .hours-bar .open { background: #20301b; color: #7fb15c; }
+  .hours-bar .closed { background: #3a1f18; color: #e07a5f; }
+}
+:root[data-theme="dark"] .hours-bar .open { background: #20301b; color: #7fb15c; }
+:root[data-theme="dark"] .hours-bar .closed { background: #3a1f18; color: #e07a5f; }
+
+/* ---- SECTIONS ---- */
+.section { padding: clamp(40px, 5vw, 72px) 0; }
+.section-alt { background: var(--paper-sunk); }
+.section-head { text-align: center; margin-bottom: clamp(28px, 4vw, 48px); }
+.section-head h2 { font-size: clamp(24px, 3vw, 36px); margin-bottom: 8px; }
+.section-head p { font-size: 15px; color: var(--ink-2); max-width: 520px; margin: 0 auto; }
+
+/* ---- FEATURE CARDS ---- */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.feature { background: var(--paper-raised); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm); transition: transform .12s, box-shadow .12s; }
+.feature:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.feature .icon { font-size: 28px; margin-bottom: 12px; }
+.feature h3 { font-size: 17px; margin-bottom: 6px; }
+.feature p { font-size: 13.5px; color: var(--ink-2); }
+
+/* ---- CATALOG PREVIEW ---- */
+.catalog { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.tree-card { background: var(--paper-raised); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .12s; }
+.tree-card:hover { transform: translateY(-2px); }
+.tree-card .img { height: 160px; background: var(--accent-wash); display: grid; place-items: center; font-size: 48px; }
+.tree-card .info { padding: 14px 16px; }
+.tree-card h4 { font-size: 15px; margin-bottom: 4px; }
+.tree-card .meta { font-size: 12px; color: var(--ink-3); }
+.tree-card .price { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--accent); margin-top: 6px; }
+
+/* ---- BLOG PREVIEW ---- */
+.posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+.post { background: var(--paper-raised); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-sm); }
+.post .date { font-size: 11px; color: var(--ink-3); letter-spacing: .06em; text-transform: uppercase; font-weight: 600; }
+.post h3 { font-size: 17px; margin: 6px 0; }
+.post p { font-size: 13.5px; color: var(--ink-2); }
+
+/* ---- MAP / LOCATION ---- */
+.location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.map-placeholder { background: var(--paper-sunk); border: 1px solid var(--line); border-radius: var(--radius); height: 300px; display: grid; place-items: center; font-size: 14px; color: var(--ink-3); }
+.location-details h3 { font-size: 20px; margin-bottom: 12px; }
+.location-details .detail { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.location-details .detail:last-child { border-bottom: none; }
+.location-details .detail .label { color: var(--ink-3); min-width: 80px; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+
+/* ---- FOOTER ---- */
+.footer { border-top: 1px solid var(--line); padding: 32px 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; }
+.footer-brand { font-size: 13px; color: var(--ink-2); }
+.footer-brand .name { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.footer-col h4 { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); font-weight: 700; margin-bottom: 10px; }
+.footer-col a { display: block; font-size: 13px; color: var(--ink-2); padding: 3px 0; text-decoration: none; }
+.footer-col a:hover { color: var(--accent); }
+.footer-bottom { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .location-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-brand" href="/">
+      <svg viewBox="0 0 36 36" fill="none">
+        <rect width="36" height="36" rx="8" fill="var(--accent)"/>
+        <path d="M18 6c0 0-6 4-6 12s6 12 6 12 6-4 6-12S18 6 18 6z" stroke="#fff" stroke-width="1.8" fill="none"/>
+        <line x1="18" y1="6" x2="18" y2="30" stroke="#fff" stroke-width="1.5"/>
+        <path d="M13 16c2-1 4-1 5 0M13 20c2 1 6 1 8 0" stroke="#fff" stroke-width="1.2" fill="none"/>
+      </svg>
+      <span>Turf &amp; Tree</span>
+    </a>
+    <div class="nav-links">
+      <a href="#seedlings">Seedlings</a>
+      <a href="#services">Services</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#blog">Updates</a>
+    </div>
+    <button class="btn-signin" id="signinBtn" onclick="signInWithGoogle()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+      Sign in
+    </button>
+    <div class="user-pill" id="userPill">
+      <img id="userAvatar" src="" alt="">
+      <span id="userName"></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Western Kansas Nursery</div>
+        <h1>Grow something <em>that lasts.</em></h1>
+        <p>Quality tree seedlings, native plants, and full-service landscaping for the high plains. From our nursery to your property.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#seedlings">Browse Seedlings</a>
+          <a class="btn-secondary" href="#visit">Visit the Nursery</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="placeholder">🌳</div>
+        <p>Photo coming soon — our nursery rows in Logan County</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOURS BANNER ===== -->
+<div class="wrap">
+  <div class="hours-bar" id="hoursBar">
+    <div class="icon">🕐</div>
+    <div class="info">
+      <h3>Nursery Hours</h3>
+      <p>Mon–Fri 8:00 AM – 5:00 PM &nbsp;|&nbsp; Sat 9:00 AM – 2:00 PM &nbsp;|&nbsp; Sun Closed</p>
+    </div>
+    <span class="status" id="openStatus"></span>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>Roots-up service</h2>
+      <p>From seedlings to full-property landscaping, we handle the work so you get the shade.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">🌱</div>
+        <h3>Tree Seedlings</h3>
+        <p>Hardy, plains-tested seedlings ready for windbreaks, shelter belts, and property plantings. Bare root and containerized.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🏡</div>
+        <h3>Landscaping</h3>
+        <p>Design, install, and maintain. Residential and commercial properties in western Kansas.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🌿</div>
+        <h3>Native Plants</h3>
+        <p>Drought-tolerant native grasses and forbs suited to the high plains climate. Low maintenance, high impact.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🪓</div>
+        <h3>Tree Care</h3>
+        <p>Pruning, removal, stump grinding, and health assessments. We take care of what's already growing.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">💧</div>
+        <h3>Irrigation</h3>
+        <p>Drip and sprinkler systems designed for Kansas water realities. Installation and seasonal maintenance.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📐</div>
+        <h3>Consultation</h3>
+        <p>Not sure what'll grow? We'll walk your property and recommend what works for your soil, sun, and goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEEDLING CATALOG ===== -->
+<section class="section section-alt" id="seedlings">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Catalog</div>
+      <h2>Tree seedlings</h2>
+      <p>Available for pickup at the nursery. Online ordering coming soon.</p>
+    </div>
+    <div class="catalog">
+      <div class="tree-card">
+        <div class="img">🌲</div>
+        <div class="info">
+          <h4>Eastern Red Cedar</h4>
+          <div class="meta">Juniperus virginiana &middot; Windbreak</div>
+          <div class="price">$3.50</div>
+        </div>
+      </div>
+      <div class="tree-card">
+        <div class="img">🌳</div>
+        <div class="info">
+          <h4>Bur Oak</h4>
+          <div class="meta">Quercus macrocarpa &middot; Shade</div>
+          <div class="price">$5.00</div>
+        </div>
+      </div>
+      <div class="tree-card">
+        <div class="img">🌾</div>
+        <div class="info">
+          <h4>Osage Orange</h4>
+          <div class="meta">Maclura pomifera &middot; Hedge</div>
+          <div class="price">$2.75</div>
+        </div>
+      </div>
+      <div class="tree-card">
+        <div class="img">🍂</div>
+        <div class="info">
+          <h4>American Elm</h4>
+          <div class="meta">Ulmus americana &middot; Shade</div>
+          <div class="price">$4.25</div>
+        </div>
+      </div>
+      <div class="tree-card">
+        <div class="img">🌿</div>
+        <div class="info">
+          <h4>Aromatic Sumac</h4>
+          <div class="meta">Rhus aromatica &middot; Native</div>
+          <div class="price">$3.00</div>
+        </div>
+      </div>
+      <div class="tree-card">
+        <div class="img">🌲</div>
+        <div class="info">
+          <h4>Ponderosa Pine</h4>
+          <div class="meta">Pinus ponderosa &middot; Windbreak</div>
+          <div class="price">$4.50</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG / UPDATES ===== -->
+<section class="section" id="blog">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">From the Field</div>
+      <h2>Updates &amp; tips</h2>
+      <p>Seasonal planting guides, nursery news, and tree care advice for the high plains.</p>
+    </div>
+    <div class="posts">
+      <div class="post">
+        <div class="date">Coming Soon</div>
+        <h3>Fall planting guide for western Kansas</h3>
+        <p>Which trees to plant before first frost, how to prep your soil, and what to skip this year.</p>
+      </div>
+      <div class="post">
+        <div class="date">Coming Soon</div>
+        <h3>Windbreak planning 101</h3>
+        <p>Spacing, species selection, and the 10-year plan for a shelter belt that actually works.</p>
+      </div>
+      <div class="post">
+        <div class="date">Coming Soon</div>
+        <h3>Why native plants beat ornamentals out here</h3>
+        <p>Drought tolerance, maintenance costs, and the case for planting what already belongs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISIT / LOCATION ===== -->
+<section class="section section-alt" id="visit">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Come See Us</div>
+      <h2>Visit the nursery</h2>
+    </div>
+    <div class="location-grid">
+      <div class="map-placeholder" id="map">
+        Google Maps embed will go here
+      </div>
+      <div class="location-details">
+        <h3>Turf &amp; Tree Nursery</h3>
+        <div class="detail"><span class="label">Address</span><span>Logan County, KS</span></div>
+        <div class="detail"><span class="label">Phone</span><span>(785) 555-0123</span></div>
+        <div class="detail"><span class="label">Email</span><span>hello@turfandtree.us.com</span></div>
+        <div class="detail"><span class="label">Mon–Fri</span><span>8:00 AM – 5:00 PM</span></div>
+        <div class="detail"><span class="label">Saturday</span><span>9:00 AM – 2:00 PM</span></div>
+        <div class="detail"><span class="label">Sunday</span><span>Closed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="name">Turf &amp; Tree</div>
+        <p>Quality seedlings and landscaping for the high plains. A 1656 brand.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a href="#seedlings">Seedlings</a>
+        <a href="#services">Landscaping</a>
+        <a href="#">Native Plants</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#visit">Visit Us</a>
+        <a href="#blog">Blog</a>
+        <a href="#">About</a>
+      </div>
+      <div class="footer-col">
+        <h4>Also from 1656</h4>
+        <a href="https://arpent.us.com">Arpent</a>
+        <a href="https://mowclock.app">MowClock</a>
+        <a href="https://aubaine.fyi">Aubaine</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Turf &amp; Tree &middot; A 1656 brand</span>
+      <span>Logan County, Kansas</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FIREBASE + TRACKING ===== -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<script>
+(function(){
+  "use strict";
+  var SITE = "turfandtree";
+
+  firebase.initializeApp({
+    apiKey: "AIzaSyDHI-_3bZANlicN6vWCLv2jCPgNSSjchY4",
+    authDomain: "back-forty-app.firebaseapp.com",
+    projectId: "back-forty-app",
+    storageBucket: "back-forty-app.firebasestorage.app",
+    messagingSenderId: "646932283421",
+    appId: "1:646932283421:web:c1b2606f788adb827206f4"
+  });
+
+  var auth = firebase.auth();
+  var db = firebase.firestore();
+  var sessionStart = Date.now();
+  var currentUser = null;
+  var sessionDocRef = null;
+
+  window.signInWithGoogle = function(){
+    var provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider).catch(function(err){
+      console.error("Sign-in failed:", err.message);
+    });
+  };
+
+  auth.onAuthStateChanged(function(user){
+    var btn = document.getElementById("signinBtn");
+    var pill = document.getElementById("userPill");
+    if(user){
+      currentUser = user;
+      btn.style.display = "none";
+      pill.style.display = "flex";
+      document.getElementById("userAvatar").src = user.photoURL || "";
+      document.getElementById("userName").textContent = user.displayName || user.email;
+
+      // Set GA4 user ID
+      if(typeof gtag !== "undefined"){
+        gtag("set", {"user_id": user.uid});
+        gtag("event", "login", {method: "Google"});
+      }
+
+      // Log session to Firestore
+      startSession(user);
+    } else {
+      currentUser = null;
+      btn.style.display = "inline-flex";
+      pill.style.display = "none";
+    }
+  });
+
+  function startSession(user){
+    sessionStart = Date.now();
+    var doc = {
+      email: user.email,
+      name: user.displayName || "",
+      photo: user.photoURL || "",
+      uid: user.uid,
+      site: SITE,
+      started: new Date().toISOString(),
+      lastPing: new Date().toISOString(),
+      duration: 0,
+      pages: [window.location.pathname]
+    };
+    db.collection("site_sessions").add(doc).then(function(ref){
+      sessionDocRef = ref;
+    }).catch(function(err){ console.warn("Session log failed:", err.message); });
+
+    // Also update user profile
+    db.collection("site_users").doc(user.uid).set({
+      email: user.email,
+      name: user.displayName || "",
+      photo: user.photoURL || "",
+      lastSite: SITE,
+      lastVisit: new Date().toISOString()
+    }, {merge: true}).catch(function(){});
+  }
+
+  // Heartbeat: update session duration every 30s
+  setInterval(function(){
+    if(!sessionDocRef) return;
+    var elapsed = Math.round((Date.now() - sessionStart) / 1000);
+    sessionDocRef.update({
+      lastPing: new Date().toISOString(),
+      duration: elapsed
+    }).catch(function(){});
+  }, 30000);
+
+  // Update on page hide (closing tab)
+  document.addEventListener("visibilitychange", function(){
+    if(document.visibilityState === "hidden" && sessionDocRef){
+      var elapsed = Math.round((Date.now() - sessionStart) / 1000);
+      sessionDocRef.update({
+        lastPing: new Date().toISOString(),
+        duration: elapsed
+      }).catch(function(){});
+    }
+  });
+
+  // Hours bar — open/closed status
+  function updateHours(){
+    var el = document.getElementById("openStatus");
+    if(!el) return;
+    var now = new Date();
+    var day = now.getDay(), h = now.getHours(), m = now.getMinutes();
+    var t = h * 60 + m;
+    var open = false;
+    if(day >= 1 && day <= 5 && t >= 480 && t < 1020) open = true; // M-F 8-17
+    if(day === 6 && t >= 540 && t < 840) open = true; // Sat 9-14
+    el.textContent = open ? "Open Now" : "Closed";
+    el.className = "status " + (open ? "open" : "closed");
+  }
+  updateHours();
+  setInterval(updateHours, 60000);
+})();
+</script>
+
+</body>
+</html>
