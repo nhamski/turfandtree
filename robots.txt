@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://turfandtree.us.com/sitemap.xml
